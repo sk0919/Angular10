@@ -1,0 +1,9 @@
+<app-header (updateLoginFlag)="updateLoginFlag($event)"  [sendDataToChild]="sendDataToChild"></app-header>
+
+    <div class="application-container">   
+        <router-outlet></router-outlet>
+    </div>
+   
+<div class="footer-container">
+    <app-footer></app-footer>
+</div>

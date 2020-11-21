@@ -1,0 +1,23 @@
+#my-side-nav {
+    height: 65vh;
+}
+
+
+/* mat-sidenav-container {
+    height: 100%
+}
+
+
+mat-sidenav, mat-side-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    background-color: lightcoral;
+    width: 200px;
+} */
+
+.footer-container{
+    position: absolute;
+    bottom: 0;
+}

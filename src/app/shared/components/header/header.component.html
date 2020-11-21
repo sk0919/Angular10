@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="navbar" [class.responsive]="check">
+    <div>Sumit's Angular Application</div>
+    <div class="container-nav">
+        <a routerLink="home" class="active"><span>Home</span></a>
+        <ng-container *ngIf="showClaimOption;">
+            <div class="dropdown">
+                <span id="clm-desc">Claims</span>
+                <div class="dropdown-content">
+                    <a routerLink="claims/create">Create</a>
+                    <a routerLink="claims/edit">Update</a>
+                </div>
+            </div>
+        </ng-container>
+        <a routerLink="news"><span>News</span></a>
+        <a routerLink="contact"><span>Contact</span></a>
+        <a href="#about"><span>About</span></a>
+        <ng-container *ngIf="sendDataToChild; else elseTemplate">
+            <a  routerLink="" (click)="unloadLoginComp()"><span>Logout</span></a>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <a  routerLink="auth/login" (click)="loadLoginComp()"><span>Login</span></a>
+        </ng-template>
+        <span href="javascript:void(0);" class="icon" (click)="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </span>
+    </div>
+</mat-toolbar>

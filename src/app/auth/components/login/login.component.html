@@ -1,0 +1,20 @@
+<div class="login-form-container">   
+    <form class="example-form" [formGroup]="signInForm" (ngSubmit)="postData(signInForm)">
+        <div class="login-field-container">
+            <div class="input-fields">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Your Email</mat-label>
+                    <input matInput type="text" formControlName="email" placeholder="random@email.com" value="">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <mat-label>Your Password</mat-label>
+                    <input matInput type="password" formControlName="password" placeholder="Enter your password" value="">
+                </mat-form-field>
+            </div>
+            <br>
+            <input mat-raised-button type="Submit" value="Sign In" [disabled]="!signInForm.valid"/>
+        </div>
+        
+    </form>
+</div>
